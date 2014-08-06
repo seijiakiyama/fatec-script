@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Ricardo Seiji - Programação para Scripts</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>Fatec-script</h1>
+          <h2></h2>
+        </header>
+
+        <!--section id="downloads" class="clearfix">
+          <a href="https://github.com/seijiakiyama/fatec-script/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/seijiakiyama/fatec-script/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/seijiakiyama/fatec-script" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section-->
+
+        <hr>
+
+        <section id="main_content">
+          <h3>
+<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Segunda Entrega</h3>
+<p>Os vídeos propostos consistiram na configuração do ambiente a ser utilizado em sala de aula.</p>
+<p>Para um suporte inicial, são utilizadas as ferramentas "pip" e "virtualenv". Ambas iniciam a estrutura que o framework "Tekton" usa.</p>
+<p>Assim, o App Engine, da Google, e PyCharm, da JetBrains, tornam-se fortes instrumentos de desenvolvimento Web, contendo todas as bibliotecas e ferramentas de execução e debug.
+<br><br><br>
+<p>1. Quais as duas principais versões atuais do interpretador Python?</p>
+<p>  As principais versões são 2.7.x (utilizada em aula) e 3.4.</p>
+<br>
+<p>2. Qual versão de Python é suportada atualmente pelo App Engine?</p>
+<p>  Versão 2.7.</p>
+<br>
+<p>3. Para que serve o SDK do App Engine?</p>
+<p>  A finalidade do SDK é fornecer acesso às ferramentas de desenvolvimento.</p>
+<br>
+<p>4. Qual a vantagem de colocar ferramentas instaladas no path do Sistema Operacional?</p>
+<p>  As ferramentas são relacionadas à variável PATH para seus comandos serem executados no CMD em qualquer diretório.</p>
+<br>
+<p>5. O que é e para que serve uma IDE?</p>
+<p>  Uma IDE fornece ferramentas de desenvolvimento que facilitam a programação e execução, indepentende do SO.</p>
+<br>
+<p>6. Como se chama o arquivo de configuração de uma aplicação App Engine?</p>
+<p>  app.yaml.</p>
+<br>
+<p>7. Qual o domínio padrão para acessar aplicações App Engine na internet?</p>
+<p>  appspot.com.</p>
+<br>
+<br>
+<br>
+<p>1. Qual o nome do arquivo de configuração do Google App Engine?</p>
+<p>  app.yaml.</p>
+<br>
+<p>2. Para que serve o item application do arquivo de configuração?</p>
+<p>  Identificar a aplicação, ou seja, deve ter o mesmo ID definido na criação dela.</p>
+<br>
+<p>3. Para que serve o item version do arquivo de configuração?</p>
+<p>  Identifica a versão da aplicação que deve ser utilizada na publicação.</p>
+<br>
+<p>4. Qual endereço deve ser utilizado para acessar uma aplicação com id foo e versão 35?</p>
+<p>  A suposta applicação teria o endereço http://35-dot-foo.appspot.com.br.</p>
+<br>
+<p>5. Para que serve a seção libraries do arquivo de configuração?</p>
+<p>  Configurar as bibliotecas utilizadas pela aplicação.</p>
+<br>
+<p>6. Para que serve a seção handlers do arquivo de configuração?</p>
+<p>  Mapear os scripts Python executados de acordo com o path das requisições.</p>
+<br>
+<p>7. Como são definidos os paths mapeados no arquivo de configuração?</p>
+<p>  São definidos por expressões regulares.</p>
+<br>
+<p>8. Por que é necessário mapear RequestHandlers nos scripts Python?</p>
+<p>  Em um arquivo, podem-se definir diversas classes. Então, o mapeamento via arquivo não é suficiente para definir a classe utilizada no processo de uma requisição.</p>
+<br>
+<p>9. Para que serve a classe RequestHandler?</p>
+<p>  Definir o código que processa uma requisição HTTP.</p>
+<br>
+<p>10. Como se relacionam os métodos da classe RequestHandler e os do protocolo HTTP?</p>
+<p>  O protocolo HTTP realiza chamadas, que ao serem processadas, estão relacionadas aos métodos de mesmo nome (Chamada GET, método get).</p>
+<br>
+<p>11. Para que serve o objeto Request?</p>
+<p>  Serve de interface de acesso à informações de uma requisição HTTP.</p>
+<br>
+<p>12. Como se obtém os valores de parâmetros enviados via query string em uma chamada HTTP do tipo GET?</p>
+<p>  Utilizando o método get do objeto Request.</p>
+<br>
+<p>13. Para que serve o objeto Response?</p>
+<p>  É uma interface de construção de uma resposta HTTP.</p>
+<br>
+<p>14. Qual o método do objeto Response serve para enviar strings?</p>
+<p>  Método write.</p>
+<br>
+<p>15. Como é possível enviar uma resposta para redirecionamento?</p>
+<p>  Utilizando o método redirect, do objeto RequestHandler.</p>
+<br>
+<br>
+<br>
+<p>1. Para que serve o Virtualenv?</p>
+<p>  Criar ambientes virtuais Python isolados.</p>
+<br>
+<p>2. Qual a função do arquivo convention.py?</p>
+<p>  Realizar a ligação entre o Tekton e o Webapp2.</p>
+<br>
+<p>3. Por que é necessário incluir bibliotecas através de código no arquivo convention.py?</p>
+<p>  O App Engine não tem acesso ao SO para instalar as bibliotecas usando o virtualenv e pip. Então, precisam ser incluídas no arquivo.</p>
+<br>
+<p>4. Como ficaria a declaração de uma função para tratar a execução de chamada no path /usuario/salvar?nome=Renzo&idade=31?</p>
+<p>  "def salvar(nome,idade)".</p>
+<br>
+<p>5. Como se diferenciam parâmetros recebidos por injeção de dependência dos recebidos via requisição HTTP?</p>
+<p>  Os parâmetros recebidos via injeção possuem o prefixo "_".</p>
+<br>
+<p>6. Qual deve ser a posição de parâmetros recebidos via injeção de dependência?</p>
+<p>  Os parâmetros recebidos via injeção de dependência devem ser os primeiros a serem declarados.</p>
+<br>
+<p>7. Qual deve ser o parâmetro declarado quando for necessário fazer um redirecionamento?</p>
+<p>  "_handler", para acessar a instância de um RequestHandler.</p>
+<br>
+<p>8. Qual o script e função devem ser utilizados para se calcular paths com base em uma função?</p>
+<p>  A função "to_path", do módulo "tekton.router".</p>
+<br>
+<!--pre><code>$ cd your_repo_root/repo_name
+$ git fetch origin
+$ git checkout gh-pages
+</code></pre-->
+
+<p></p>
+
+<h3>
+<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>//Título Teste</h3>
+
+<p><?php echo "string"; ?></p>
+
+<h3>
+<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Laiá Laiá</h3>
+
+<p>Texto <code>tag code</code> texto</p>
+
+<h3>
+<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+
+<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile.</p>
+
+<h3>
+<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+
+<p>Ligue djá.</p>
+        </section>
+
+        <footer>
+          Fatec-script is maintained by <a href="https://github.com/seijiakiyama">seijiakiyama</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
+    </div>
+  </body>
+</html>

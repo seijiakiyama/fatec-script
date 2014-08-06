@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -34,19 +35,40 @@
           <h3>
 <a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Entregas da disciplina Programação para Scripts.</h3>
 
-<p>//Teste</p>
+<p id="test"><a href="2entrega.html">Segunda Entrega</a></p>
 
-<pre><code>$ cd your_repo_root/repo_name
+<script>
+  if (window.XMLHttpRequest)
+    {// code for IE7+, Firefox, Chrome, Opera, Safari
+    xmlhttp=new XMLHttpRequest();
+    }
+  else
+    {// code for IE6, IE5
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+  xmlhttp.open("GET","blog.xml",false);
+  xmlhttp.send();
+  xmlDoc=xmlhttp.responseXML;
+
+  var x=xmlDoc.getElementsByTagName("blog-post");
+  for (i=0;i<x.length;i++)
+  { 
+    document.write("ah");
+    $( "#test" ).append("ah2");
+  }
+</script>
+
+<!--pre><code>$ cd your_repo_root/repo_name
 $ git fetch origin
 $ git checkout gh-pages
-</code></pre>
+</code></pre-->
 
-<p>//Teste</p>
+<p></p>
 
 <h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>//Título Teste</h3>
+<!--a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>//Título Teste</h3>
 
-<p>LOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLOLO.</p>
+<p></p>
 
 <h3>
 <a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Laiá Laiá</h3>
@@ -61,7 +83,7 @@ $ git checkout gh-pages
 <h3>
 <a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
 
-<p>Ligue djá.</p>
+<p>Ligue djá.</p-->
         </section>
 
         <footer>
