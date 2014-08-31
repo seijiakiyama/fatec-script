@@ -4,11 +4,32 @@
     <link rel="stylesheet" href="/static/font-awesome/css/font-awesome.min.css"/>
 {% endblock %}
 {% block body %}
+    <div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<div class="page-header">
+				<h1>
+					<img src="/static/img/play_logo_x2.png">Apps Review <small>The ultimate review for useless apps!</small>
+				</h1>
+			</div>
+			<p><div class="col-md-4">
+				<img src="/static/img/unnamed.png">
+                </div>
+            <div class="col-md-4">
+				<img src="/static/img/unnamed2.png">
+                </div>
+            <div class="col-md-4">
+				<img src="/static/img/unnamed3.png">
+                </div>
+			</p>
+		</div>
+	</div>
+</div>
     <div class="container text-center">
         <div class="row">
             <div class="col-md-12">
-                <h1>Tekton</h1>
-                <p>{% trans %}A Full-Stack project for Google App Engine{% endtrans %}</p>
+                <h1>AppsSpot Review</h1>
+                <p>{% trans %}Apps Review{% endtrans %}</p>
             </div>
         </div>
         <br/>
@@ -16,20 +37,19 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="well">
-                    <h2>{% trans %}Create CRUD code on
-                        <a href="https://cloud.google.com/products/app-engine/">App Engine</a>{% endtrans %}
+                    <h2>{% trans %}Informações atualizadas da
+                        <a href="https://play.google.com/store?hl=pt_BR">Google Play Store</a>{% endtrans %}
                     </h2>
                     <br/>
 
                     <p>
-                        <a href="/courses" class="btn btn-primary"></i>{% trans %} Check Courses App
-                            Out{% endtrans %} &raquo;</a>
+                        <a href="/appss" class="btn btn-primary"></i>{% trans %} Confira os apps cadastrados{% endtrans %} &raquo;</a>
                     </p>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="well">
-                    <h2>{% trans %}Tekton is open source.{% endtrans %}</h2>
+                    <h2>{% trans %}Made with Tekton.{% endtrans %}</h2>
                     <br/>
 
                     <p>

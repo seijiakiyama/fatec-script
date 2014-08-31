@@ -20,7 +20,13 @@
     <title>{% block title %}Tekton Fullstrack{% endblock %}</title>
     <!-- Bootstrap -->
     <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <!--link rel="stylesheet" href="/static/css/foundation.css" /-->
+    <link rel="stylesheet" href="/static/css/pure-min.css">
+    <link rel="stylesheet" href="/static/css/menus.css.css">
     <link href="/static/css/default.css" rel="stylesheet">
+    <script src="/static/js/vendor/modernizr-2.6.2.min.js.js"></script>
     <style>
         .pad8 {
             margin: 8px 15px;
@@ -36,54 +42,127 @@
     {% block css %}{% endblock %}
     {% block js %}{% endblock %}
 </head>
-<body>
-<div class="navbar-wrapper">
-    <div class="navbar navbar-inverse navbar-static-top">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a href="/" class="navbar-brand">Tekton</a>
-        </div>
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                {% macro select_tab(tab='') %}
-                    <li {{ 'class=active' if tab=='COURSES' }}><a href="/courses">{% trans %}Courses{% endtrans %}</a></li>
-                    {% if _logged_user and 'ADMIN' in _logged_user.groups %}
-                        <li {{ 'class=active' if tab=='ADMIN' }}><a href="/admin">{% trans %}Admin{% endtrans %}</a></li>
-                    {% endif %}
-                {% endmacro %}
-                {% block tabs %}
-                    {{ select_tab() }}
-                {% endblock %}
-            </ul>
-            <div class="nav navbar-nav pull-right pad8">
+<body> <div class="container-fluid">
+    <div class="row clearfix">
+		<div id="menu" class="col-md-12 column">
+
+            <nav class="navbar navbar-default" role="navigation">
+				<div class="navbar-header">
+					 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> <a class="navbar-brand" href="#">AppsSpotlight</a>
+				</div>
+
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="nav navbar-nav">
+                            {% macro select_tab(tab='') %}
+                                <li {{ 'class=pure-menu-selected' if tab=='APPSS' }}><a href="/appss">{% trans %}Apps{% endtrans %}</a></li>
+                                <li {{ 'class=pure-menu-selected' if tab=='LISTASS' }}><a href="/listass">{% trans %}Listas{% endtrans %}</a></li>
+                                <li {{ 'class=pure-menu-selected' if tab=='REVIEWSS' }}><a href="/reviewss">{% trans %}Reviews{% endtrans %}</a></li>
+                                {% if _logged_user and 'ADMIN' in _logged_user.groups %}
+                                <li {{ 'class=pure-menu-selected' if tab=='ADMIN' }}><a href="/admin">{% trans %}Admin{% endtrans %}</a></li>
+                                {% endif %}
+                            {% endmacro %}
+                            {% block tabs %}
+                                {{ select_tab() }}
+                            {% endblock %}
+                        </li>
+						<!--li>
+							<a href="#">Link</a>
+						</li>
+						<li class="dropdown">
+							 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#">Action</a>
+								</li>
+								<li>
+									<a href="#">Another action</a>
+								</li>
+								<li>
+									<a href="#">Something else here</a>
+								</li>
+								<li class="divider">
+								</li>
+								<li>
+									<a href="#">Separated link</a>
+								</li>
+								<li class="divider">
+								</li>
+								<li>
+									<a href="#">One more separated link</a>
+								</li>
+							</ul>
+						</li-->
+					</ul>
+					<form class="navbar-form navbar-left" role="search">
+						<div class="form-group">
+							<input class="form-control" type="text" />
+						</div> <button type="submit" class="btn btn-default">Submit</button>
+					</form>
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a href="#">Favoritos</a>
+						</li>
+						<li class="dropdown">
+							 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Opções<strong class="caret"></strong></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#">Action</a>
+								</li>
+								<li>
+									<a href="#">Another action</a>
+								</li>
+								<li>
+									<a href="#">Something else here</a>
+								</li>
+								<li class="divider">
+								</li>
+								<li>
+									<a href="#">Separated link</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+                    <div class="nav navbar-nav pull-right pad8">
                 {% if _logged_user %}
 
                     <form class="form-inline" action="{{ _logout_path }}" method="post">
                         <div class="input-append" id="logout-div">
-                            <span>{{ _logged_user.email }}</span>
+                            <span>{{ _logged_user.nome }}</span>
                             <button class="btn btn-danger" type="submit">{% trans %}Logout{% endtrans %}</button>
                             {{ csrf_input() }}
                         </div>
                     </form>
 
                 {% else %}
-                    <a class="btn btn-success" href="{{ _login_path }}">{% trans %}Login{% endtrans %}</a>
+                    <a class="btn btn-success" href="{{ _login_path }}">{% trans %} Login{% endtrans %}</a>
 
                 {% endif %}
 
             </div>
-        </div>
+				</div>
+
+			</nav>
+<ul class="breadcrumb">
+				<li>
+					<a href="#">Home</a> <span class="divider">/</span>
+				</li>
+				<li>
+					<a href="#">Library</a> <span class="divider">/</span>
+				</li>
+				<li class="active">
+					Data
+				</li>
+			</ul>
+        <!--a class="pure-menu-heading pure-menu-selected btn btn-primary" href="/">AppReview</a-->
     </div>
 </div>
+
+<div id="main" class="main-block navbar-wrapper col-md-12">
 {% block body %}{% endblock %}
-<div class="footer">
-    <div class="container">
-        <p class="text-muted text-right">Tekton Full-Stack: <a target="_blank" href="https://github.com/renzon/tekton-fullstack">Git Hub</a></p>
-    </div>
+</div></div>
+<div class="footer container">
+        <p class="text-muted text-right">Using Tekton: <a target="_blank" href="https://github.com/renzon/tekton-fullstack">Git Hub</a></p>
 </div>
 </body>
 </html>
