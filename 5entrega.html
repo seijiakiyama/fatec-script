@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Ricardo Seiji - Programação para Scripts</title>
+
+    <style>
+a.tooltip{
+  position:relative; 
+  text-decoration:none;
+  cursor:help; 
+  }
+
+  a.tooltip:hover{
+  background:transparent;
+  color:#f00;
+  z-index:25; 
+
+  }
+  a.tooltip span{display: none
+  }
+
+  a.tooltip:hover span{ 
+  display:block;
+  position:absolute;
+  width:210px; 
+  top:20px;
+  left:0;
+  font-size: 12px;
+  padding:5px;
+  border:1px solid #999;
+  background:#e0ffff; 
+  color:#000;
+  }
+
+</style>
+
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>Fatec-script</h1>
+          <h2></h2>
+        </header>
+
+        <!--section id="downloads" class="clearfix">
+          <a href="https://github.com/seijiakiyama/fatec-script/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/seijiakiyama/fatec-script/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/seijiakiyama/fatec-script" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section-->
+
+        <hr>
+
+        <section id="main_content">
+          <h3>
+<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Quinta Entrega</h3>
+<p>Os vídeos indicados para aula descreveram as formas de login na aplicação feita utilizando o Tekton.</p>
+<p>São 3 opções, já programadas, de login:</p>
+<p>Utilizando a conta Google, que já possibilita o acesso à página de admin, se utilizado o email que foi cadastrado no AppEngine;</p>
+<p>Utilizando <a href="https://pswdless.appspot.com">Passwordless</a>, ou seja, apenas com o email já cadastrado na aba de administração e utilizando o Token disponibilizado na aplicação;</p>
+<p>Utilizando o Facebook, onde é necessário criar um app no <a href="https://developers.facebook.com/">Facebook Developers</a> e utilizar o Token gerado.</p>
+<br><br>
+<p>O framework, por padrão, é protegido.</p>
+<p>Para desproteger a página, para acesso sem login, é utilizada a notação <pre><code>@login_not_required</code></pre>.</p>
+<p>Para desabilitar a proteção contra <a href="#" class="tooltip"><em><strong>Cross-site request forgery</em></strong>
+<span>Tipo de exploração maliciosa pelo qual comandos não autorizados são transmitidos de um usuário que confia no website.</span></a>, é utilizada a notação <pre><code>@no_csrf</code></pre></p>
+<p>Para aplicar esse conceito, uma página de formulário pode ser utilizada. Caso um método esteja com a notação acima, será desprotegido e acessível. Em casos de manipulação de dados, o método que os salva não deve ter a notação.</p>
+<p>Através do Tekton, a página <a>/permission</a> já exibe as configurações de permissões.</p>
+<p>Possuindo grupos de acesso, as permissões podem ser configuradas utilizando as notações
+<pre><code>@permissions()
+@login_required</code></pre>.</p>
+<p>Por fim, pode-se utilizar uma variável já instanciada e utilizada na base, _logged_user. Através dele, pode-se obter informações do usuário logado, como é feito ao exibir a aba de ADMIN e o nome/email do usuário ao lado do botão de Logout.</p>
+
+<br>
+<!--pre><code>$ cd your_repo_root/repo_name
+$ git fetch origin
+$ git checkout gh-pages
+</code></pre-->
+
+<p></p>
+
+<!--h3>
+<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>//Título Teste</h3>
+
+<p><?php echo "string"; ?></p>
+
+<h3>
+<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Laiá Laiá</h3>
+
+<p>Texto <code>tag code</code> texto</p>
+
+<h3>
+<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+
+<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile.</p>
+
+<h3>
+<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+
+<p>Ligue djá.</p-->
+        </section>
+
+        <footer>
+          Fatec-script is maintained by <a href="https://github.com/seijiakiyama">seijiakiyama</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
+    </div>
+  </body>
+</html>
