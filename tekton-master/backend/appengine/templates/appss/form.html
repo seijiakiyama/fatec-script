@@ -2,10 +2,12 @@
 {% block css %}
 {% endblock %}
 {% block body %}
-        <form action=" {{ save_path }}" method="post">
+        <form action=" {{ salvar_path }}" method="post" role="form">
             {{ csrf_input() }}
             {{ form_input('Nome', 'nome', '', '') }}
             {{ form_input('Link', 'link', '', '') }}
+            {{ form_input('Avaliação', 'avaliacao', '', '') }}
+            {{ form_input('Descricao', 'descricao', '', '') }}
             <button type="submit">Salvar</button>
         </form>
 

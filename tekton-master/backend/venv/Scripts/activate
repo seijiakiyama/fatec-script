@@ -39,7 +39,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="$(if [ "$OSTYPE" "==" "cygwin" ]; then cygpath -u 'D:\Seiji\Documentos\progscr\tekton-master\backend\venv'; else echo '/D/Seiji/Documentos/progscr/tekton-master/backend/venv'; fi;)"
+VIRTUAL_ENV="$(if [ "$OSTYPE" "==" "cygwin" ]; then cygpath -u 'D:\Seiji\Documentos\fatec-script\tekton-master\backend\venv'; else echo '/D/Seiji/Documentos/fatec-script/tekton-master/backend/venv'; fi;)"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
