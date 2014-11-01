@@ -31,3 +31,8 @@ indexes:
   properties:
   - name: class
   - name: email
+
+- kind: Review
+  properties:
+  - name: app
+  - name: deleted

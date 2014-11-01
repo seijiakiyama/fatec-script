@@ -4,6 +4,8 @@ from gaebusiness.gaeutil import SaveCommand, ModelSearchCommand
 from gaeforms.ndb.form import ModelForm
 from gaegraph.business_base import UpdateNode
 from apps_app.model import apps
+from routes.appss.form import AppForm, App
+
 
 class appsPublicForm(ModelForm):
     """
@@ -44,14 +46,14 @@ class appsShortForm(ModelForm):
 
 
 class SaveappsCommand(SaveCommand):
-    _model_form_class = appsForm
+    _model_form_class = AppForm
 
 
 class UpdateappsCommand(UpdateNode):
-    _model_form_class = appsForm
+    _model_form_class = AppForm
 
 
 class ListappsCommand(ModelSearchCommand):
     def __init__(self):
-        super(ListappsCommand, self).__init__(apps.query_by_creation())
+        super(ListappsCommand, self).__init__(App.query())
 
